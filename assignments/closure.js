@@ -1,6 +1,19 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function hello() {
+  console.log('Hi how are you')
 
+  function response() {
+    console.log('I am doing fine, what about you')
+
+    function thisIsDeep() {
+      console.log(`We have gotten pretty deep here haven't we?`)
+    }
+    thisIsDeep();
+  }
+  response();
+}
+hello();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
