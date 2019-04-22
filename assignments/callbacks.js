@@ -30,7 +30,7 @@ function getLength(arr, cb) {
   return cb(arr.length)
 }
 getLength(items, function(length) {
-  console.log(length)
+
 });
 
 /* ------------------------------------------------------------------------------------------------------------*/
@@ -39,39 +39,46 @@ function last(arr, cb) {
   // last passes the last item of the array into the callback.
   return cb(arr[arr.length-1]);
 }
-last(items, function(item) {
-  console.log(item)
-})
+// last(items, function(item) {
+//   console.log(item)
+// })
 
 
 /* ------------------------------------------------------------------------------------------------------------*/
 
-function add(num1, num2) {
-  return num1 + num2;
-}
+
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-  return cb(x, y)
+  return cb(x + y)
 }
-console.log(sumNums(1,3, add))
 
 /* ------------------------------------------------------------------------------------------------------------*/
 
-function multiply(num1, num2) {
-  return num1 * num2;
-}
+
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
-  return cb (x , y )
+  return cb (x * y )
 }
-console.log(multiplyNums(3, 4, multiply))
+
 
 /* ------------------------------------------------------------------------------------------------------------*/
 
+// contains checks if an item is present inside of the given array/list.
+// Pass true to the callback if it is, otherwise pass false.
 function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
+
+  for ( let i=0 ; i<items.length ; i++) {
+
+    if ( items[i] === item ) {
+      return cb(true) } 
+    
+    else {
+      return cb(false) }
+
+  }
 }
+
+
 
 /* STRETCH PROBLEM */
 
